@@ -1,0 +1,24 @@
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ebebeb;
+    padding: 5px 10px;
+    &__contact {
+    }
+
+    // .chat-header__name
+
+    &__name {
+    }
+
+    // .chat-header__visit-date
+
+    &__visit-date {
+    }
+
+    // .chat-header__controls
+
+    &__controls {
+        display: flex;
+    }
+}

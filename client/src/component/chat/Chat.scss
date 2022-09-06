@@ -1,0 +1,7 @@
+.chat{
+    display: flex;
+    flex-direction: column;
+    &__chat-list{
+        flex-grow: 1;
+    }
+}

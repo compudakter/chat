@@ -1,0 +1,12 @@
+.message-input{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    &__textarea{
+        flex-grow: 1;
+        margin: 0 10px;
+    }
+    &__btn{
+        flex-shrink: 0;
+    }
+}

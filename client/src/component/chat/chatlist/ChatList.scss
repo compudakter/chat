@@ -1,0 +1,8 @@
+.chat-list{
+    overflow: auto;
+    padding: 10px;
+    background:#eee;
+    &__message{
+        margin-bottom: 20px;
+    }
+}
