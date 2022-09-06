@@ -1,55 +1,44 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react'; 
-import { PageLayout} from '../component/layout/PageLayout';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { PageLayout } from "../component/layout/PageLayout";
+import { parseContacts } from "../service/contact";
+import { DEFAULT_CONTACTS_INFO } from "../models/contacts";
+import { ProviderWrapper } from "../testdata/TestStoreWrapper";
+
+const ProvidedPageLayout = () => {
+  return (
+    <ProviderWrapper>
+      <PageLayout
+        name="John"
+        visitDate={new Date()}
+        messages={[
+          {
+            text: "Тест сообщение Тест сообщение Тест сообщение ",
+          },
+          {
+            text: "Тест сообщение Тест сообщение Тест сообщение ",
+          },
+          {
+            text: "Тест сообщение Тест сообщение Тест сообщение ",
+          },
+        ]}
+      />
+    </ProviderWrapper>
+  );
+};
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/PageLayout',
-  component: PageLayout, 
+  title: "Example/PageLayout",
+  component: ProvidedPageLayout,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
-} as ComponentMeta<typeof PageLayout>;
- 
-const Template: ComponentStory<typeof PageLayout> = (args) => <PageLayout {...args} />;
+} as ComponentMeta<typeof ProvidedPageLayout>;
 
-export const PageLayoutImpl = Template.bind({});  
-PageLayoutImpl.args = {
-  name:'John',
-  visitDate:new Date(),
-  messages:[
-    {
-      text:"Тест сообщение Тест сообщение Тест сообщение "
-    },
-    {
-      text:"Тест сообщение Тест сообщение Тест сообщение "
-    },
-    {
-      text:"Тест сообщение Тест сообщение Тест сообщение "
-    }
-  ],
-    contacts:[
-      {
-        avatar: '',
-        lastDate: new Date(),
-        lastMessage: 'Тестовое сообщение Тестовое сообщение Тестовое сообщение Тестовое сообщение',
-        name: 'John',
-        newMessagesCount: 2,
-      },
-      {
-        avatar: '',
-        lastDate: new Date(),
-        lastMessage: 'Тестовое сообщение Тестовое сообщение Тестовое сообщение Тестовое сообщение',
-        name: 'John',
-        newMessagesCount: 2,
-      },
-      {
-        avatar: '',
-        lastDate: new Date(),
-        lastMessage: 'Тестовое сообщение Тестовое сообщение Тестовое сообщение Тестовое сообщение',
-        name: 'John',
-        newMessagesCount: 2,
-      }
-    ]
-};
- 
+const Template: ComponentStory<typeof ProvidedPageLayout> = (args) => (
+  <ProvidedPageLayout />
+);
+
+export const PageLayoutImpl = Template.bind({});
+PageLayoutImpl.args = {};

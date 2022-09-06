@@ -1,3 +1,5 @@
-export interface MessageData{
-    text:string
+export interface MessageData {
+  text: string;
+  owner: number;
+  timestamp: number;
 }
