@@ -14,12 +14,18 @@ const ProvidedPageLayout = () => {
         messages={[
           {
             text: "Тест сообщение Тест сообщение Тест сообщение ",
+            owner:1,
+            timestamp:1
           },
           {
             text: "Тест сообщение Тест сообщение Тест сообщение ",
+            owner:1,
+            timestamp:1
           },
           {
             text: "Тест сообщение Тест сообщение Тест сообщение ",
+            owner:1,
+            timestamp:1
           },
         ]}
       />

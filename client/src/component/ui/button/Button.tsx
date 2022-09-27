@@ -1,18 +1,16 @@
 import { FC } from "react"
-import { getBlockClass } from "../../../utils/common"
 import './Button.scss'
 
+type ButtonVariant = 'primary' | 'success' | 'danger'
 interface ButtonProps{
-    children?:any,
-    block?:string
-    onClick:(e:any)=>void
+    variant?:ButtonVariant
+    children?:any
+    onClick?:(e:any)=>void
 }
 
-export const Button:FC<ButtonProps> = ({children,block,onClick}) =>{
-    const blockClass = getBlockClass('btn',block)
-    return (
-        <div className={`${blockClass} btn`} onClick={onClick}>
-            {children}
-        </div>
-    )
+export const Button:FC<ButtonProps> = ({variant,children,onClick}) =>{
+    const bVariant = `btn_${variant || 'primary'}` 
+    return <button className={`btn ${bVariant}`} onClick={onClick}>
+        {children}
+    </button>
 }

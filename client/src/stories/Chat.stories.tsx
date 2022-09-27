@@ -1,6 +1,6 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react'; 
-import { Chat} from '../component/chat/Chat';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Chat } from '../component/chat/Chat';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -11,23 +11,28 @@ export default {
     backgroundColor: { control: 'color' },
   },
 } as ComponentMeta<typeof Chat>;
- 
+
 const Template: ComponentStory<typeof Chat> = (args) => <Chat {...args} />;
 
-export const ChatItem = Template.bind({});  
+export const ChatItem = Template.bind({});
 ChatItem.args = {
-  name:'John',
-  visitDate:new Date(),
-  messages:[
+  name: 'John',
+  visitDate: new Date(),
+  messages: [
     {
-      text:"Тест сообщение Тест сообщение Тест сообщение "
+      text: "Тест сообщение Тест сообщение Тест сообщение ",
+      owner: 1,
+      timestamp: 1
     },
     {
-      text:"Тест сообщение Тест сообщение Тест сообщение "
+      text: "Тест сообщение Тест сообщение Тест сообщение ",
+      owner: 1,
+      timestamp: 1
     },
     {
-      text:"Тест сообщение Тест сообщение Тест сообщение "
+      text: "Тест сообщение Тест сообщение Тест сообщение ",
+      owner: 1,
+      timestamp: 1
     }
   ]
 };
- 

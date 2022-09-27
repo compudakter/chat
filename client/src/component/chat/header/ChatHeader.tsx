@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { getBlockClass } from "../../../utils/common"
-import { Button } from "../../ui/button/Button"
+import { RoundButton } from "../../ui/roundbutton/RoundButton"
 import './ChatHeader.scss'
 interface ChatHeaderProps{
     name:string
@@ -16,10 +16,10 @@ export const ChatHeader:FC<ChatHeaderProps> = ({name,visitDate,block}) =>{
             <div className="chat-header__visit-date">был(а) {visitDate.getMinutes()} минуты назад</div>
         </div>
         <div className="chat-header__controls">
-            <Button onClick={()=>{}} block="chat-header">+</Button>
-            <Button onClick={()=>{}} block="chat-header">-</Button>
-            <Button onClick={()=>{}} block="chat-header">*</Button>
-            <Button onClick={()=>{}} block="chat-header">.</Button>
+            <RoundButton onClick={()=>{}} block="chat-header">+</RoundButton>
+            <RoundButton onClick={()=>{}} block="chat-header">-</RoundButton>
+            <RoundButton onClick={()=>{}} block="chat-header">*</RoundButton>
+            <RoundButton onClick={()=>{}} block="chat-header">.</RoundButton>
         </div>
     </div>
 }

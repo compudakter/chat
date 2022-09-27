@@ -11,7 +11,7 @@ export const chat = createModel<RootModel>()({
       const newState = { ...state, activeRoom: id };
       return newState;
     },
-    sendRoomInfo(state, payload:{id: number,messages:MessageData[],members:Member[]) {
+    sendRoomInfo(state, payload:{id: number,messages:MessageData[],members:Member[]}) {
       const {id,members,messages} = payload
       const newState = { ...state, activeRoom: id };
       return newState;

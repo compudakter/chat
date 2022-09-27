@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { getBlockClass } from "../../../utils/common"
-import { Button } from "../../ui/button/Button"
+import { RoundButton } from "../../ui/roundbutton/RoundButton"
 import { TextArea } from "../../ui/textarea/TextArea"
 import './MessageInput.scss'
 interface MessageInputProps{
@@ -9,8 +9,8 @@ interface MessageInputProps{
 export const MessageInput:FC<MessageInputProps> = ({block}) =>{
     const blockClass = getBlockClass('message-input',block)
     return <div className={`${blockClass} message-input`}>
-        <Button block="message-input" onClick={()=>{}}>()</Button>
+        <RoundButton block="message-input" onClick={()=>{}}>()</RoundButton>
         <TextArea value="Сообщение" onChange={()=>{}} block="message-input"/>
-        <Button block="message-input"  onClick={()=>{}}>={'>'}</Button>
+        <RoundButton block="message-input"  onClick={()=>{}}>={'>'}</RoundButton>
     </div>
 }

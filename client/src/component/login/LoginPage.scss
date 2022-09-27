@@ -1,38 +1,63 @@
 .login-page {
+  background: #ebebeb;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // .login-page__form
 
-    // .login-page__form
+  &__form {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  &__type {
+    display: flex;
+    margin-bottom: 0.5rem;
+    &-btn {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
 
-    &__form {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &_active {
+        background: #3498db;
+        color: white;
+      }
     }
+  }
+  // .login-page__title
 
-    // .login-page__title
+  &__title {
+  }
 
-    &__title {
-    }
+  // .login-page__content
 
-    // .login-page__content
+  &__content {
+  }
 
-    &__content {
-    }
+  // .login-page__group
 
-    // .login-page__group
+  &__group {
+    margin-bottom: 0.5rem;
+  }
 
-    &__group {
-    }
+  // .login-page__label
 
-    // .login-page__label
+  &__label {
+  }
 
-    &__label {
-    }
+  // .login-page__input
 
-    // .login-page__input
+  &__input {
+  }
 
-    &__input {
-    }
+  // .login-page__signup
 
-    // .login-page__signup
-
-    &__signup {
-    }
+  &__signup {
+  }
 }
- 
