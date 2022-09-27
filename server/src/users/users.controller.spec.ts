@@ -39,19 +39,22 @@ describe('UsersController', () => {
       name:'Abc',
       link:'ddd',
       password:'123',
-      phone:'+79811134423'
+      phone:'+79811134423',
+      email:'sdf'
     }
     const user2:CreateUserDto = {
       name:'Test27',
       link:'ddd',
       password:'233',
-      phone:'+79811138976'
+      phone:'+79811138976',
+      email:'sdf'
     }
     const user3:CreateUserDto = {
       name:'John',
       link:'ddd',
       password:'033',
-      phone:'+7271138976'
+      phone:'+7271138976',
+      email:'sdf'
     }
     
     const created1 = await controller.create(user1)

@@ -16,6 +16,9 @@ export class User    {
 
     @Column()
     phone:string
+    
+    @Column()
+    email:string
 
     @Column()
     password:string

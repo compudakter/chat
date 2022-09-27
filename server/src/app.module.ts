@@ -9,6 +9,8 @@ import { MessagesModule } from './messages/messages.module';
 import { Chatroom } from './chatrooms/entities/chatroom.entity';
 import { Message } from './messages/entities/message.entity';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { TokenModule } from './token/token.module';
+import { AuthModule } from './auth/auth.module';
 
 const mode = process.env.NODE_ENV||'development'
 const isDevelopment = mode === 'development' 
@@ -42,7 +44,9 @@ const isDevelopment = mode === 'development'
     }),
     UsersModule,
     ChatroomsModule,
-    MessagesModule],
+    MessagesModule,
+    TokenModule,
+    AuthModule],
   controllers: [AppController], 
   providers: [AppService ],
 })

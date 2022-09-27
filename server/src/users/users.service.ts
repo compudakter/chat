@@ -21,6 +21,9 @@ export class UsersService {
   async findOne(id: number) {
     return await this.userRepository.findOne({where:{id} });
   }
+  async findByEmail(email:string) {
+    return await this.userRepository.findOne({where:{email} });
+  }
   async searchUsers(search:string){
     const searchResult =  await this.userRepository.find({
       where:[
